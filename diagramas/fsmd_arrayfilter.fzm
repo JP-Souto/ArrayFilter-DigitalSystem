@@ -1,4 +1,4 @@
-## File last modified by Fizzim: 17:45:09 on 17/05/25
+## File last modified by Fizzim: 19:12:29 on 30/06/25
 <version>
    14.02.26
 </version>
@@ -302,10 +302,10 @@
 13
 </SCounter>
 <TCounter>
-12
+13
 </TCounter>
 <TableVis>
-true
+false
 </TableVis>
 <TableSpace>
 20
@@ -518,7 +518,7 @@ fzm_globalTable
 </state>
 ## END STATE OBJECT
 <textObj>
-regI <- a*
+regI <- data
    <x>
    173
    </x>
@@ -883,7 +883,7 @@ regI <- a*
 </state>
 ## END STATE OBJECT
 <textObj>
-regSize <- size
+regSize <- data
    <x>
    430
    </x>
@@ -1082,7 +1082,7 @@ regSize <- size
 </transition>
 ## END STATE TRANSITION OBJECT
 <textObj>
-regJ <- b*
+regJ <- data
    <x>
    720
    </x>
@@ -1376,12 +1376,12 @@ regJ <- b*
    </page>
 </textObj>
 <textObj>
-compara regSize com regI
+if(regI < regSize)
    <x>
-   696
+   704
    </x>
    <y>
-   445
+   443
    </y>
    <page>
    1
@@ -1395,7 +1395,7 @@ compara regSize com regI
             ABS
             </status>
          <value>
-         S8
+         S7
             <status>
             LOCAL
             </status>
@@ -1448,16 +1448,16 @@ compara regSize com regI
       </name>
    </attributes>
    <x0>
-   144
+   151
    </x0>
    <y0>
-   429
+   368
    </y0>
    <x1>
-   274
+   281
    </x1>
    <y1>
-   559
+   498
    </y1>
    <reset>
    false
@@ -1576,10 +1576,10 @@ compara regSize com regI
             </status>
          </resetval>
          <x2Obj>
-         -4
+         24
          </x2Obj>
          <y2Obj>
-         -13
+         -23
          </y2Obj>
          <page>
          1
@@ -1590,7 +1590,7 @@ compara regSize com regI
    S3
    </startState>
    <endState>
-   S8
+   S7
    </endState>
    <startPtX>
    575.0
@@ -1599,28 +1599,28 @@ compara regSize com regI
    508.0
    </startPtY>
    <endPtX>
-   273.0
+   281.0
    </endPtX>
    <endPtY>
-   505.0
+   433.0
    </endPtY>
    <startCtrlPtX>
-   518.0
+   515.0
    </startCtrlPtX>
    <startCtrlPtY>
-   508.0
+   497.0
    </startCtrlPtY>
    <endCtrlPtY>
-   330.0
+   337.0
    </endCtrlPtY>
    <endCtrlPtY>
-   505.0
+   444.0
    </endCtrlPtY>
    <startStateIndex>
    17
    </startStateIndex>
    <endStateIndex>
-   1
+   0
    </endStateIndex>
    <page>
    1
@@ -1658,12 +1658,12 @@ compara regSize com regI
 </transition>
 ## END STATE TRANSITION OBJECT
 <textObj>
-done
+done <= 1
    <x>
-   258
+   262
    </x>
    <y>
-   438
+   373
    </y>
    <page>
    1
@@ -1786,16 +1786,16 @@ done
       </equation>
    </attributes>
    <startState>
-   S8
+   S7
    </startState>
    <endState>
    S0
    </endState>
    <startPtX>
-   167.0
+   174.0
    </startPtX>
    <startPtY>
-   444.0
+   383.0
    </startPtY>
    <endPtX>
    140.0
@@ -1804,10 +1804,10 @@ done
    248.0
    </endPtY>
    <startCtrlPtX>
-   140.0
+   147.0
    </startCtrlPtX>
    <startCtrlPtY>
-   421.0
+   360.0
    </startCtrlPtY>
    <endCtrlPtY>
    140.0
@@ -1917,16 +1917,16 @@ done
       </name>
    </attributes>
    <x0>
-   694
+   704
    </x0>
    <y0>
-   659
+   723
    </y0>
    <x1>
-   824
+   834
    </x1>
    <y1>
-   789
+   853
    </y1>
    <reset>
    false
@@ -2068,10 +2068,10 @@ done
    561.0
    </startPtY>
    <endPtX>
-   717.0
+   727.0
    </endPtX>
    <endPtY>
-   674.0
+   738.0
    </endPtY>
    <startCtrlPtX>
    651.0
@@ -2080,10 +2080,10 @@ done
    595.0
    </startCtrlPtY>
    <endCtrlPtY>
-   700.0
+   710.0
    </endCtrlPtY>
    <endCtrlPtY>
-   654.0
+   718.0
    </endCtrlPtY>
    <startStateIndex>
    8
@@ -2127,12 +2127,12 @@ done
 </transition>
 ## END STATE TRANSITION OBJECT
 <textObj>
-compara a[regI] com 0
+if(regI > 0)
    <x>
-   809
+   819
    </x>
    <y>
-   672
+   739
    </y>
    <page>
    1
@@ -2202,7 +2202,7 @@ compara a[regI] com 0
             ABS
             </status>
          <value>
-         A[regI] < 0
+         regI < 0
             <status>
             LOCAL
             </status>
@@ -2244,10 +2244,10 @@ compara a[regI] com 0
             </status>
          </resetval>
          <x2Obj>
-         67
+         55
          </x2Obj>
          <y2Obj>
-         -25
+         -19
          </y2Obj>
          <page>
          1
@@ -2261,10 +2261,10 @@ compara a[regI] com 0
    S3
    </endState>
    <startPtX>
-   791.0
+   801.0
    </startPtX>
    <startPtY>
-   667.0
+   731.0
    </startPtY>
    <endPtX>
    705.0
@@ -2273,10 +2273,10 @@ compara a[regI] com 0
    497.0
    </endPtY>
    <startCtrlPtX>
-   789.0
+   799.0
    </startCtrlPtX>
    <startCtrlPtY>
-   604.0
+   668.0
    </startCtrlPtY>
    <endCtrlPtY>
    769.0
@@ -2386,16 +2386,16 @@ compara a[regI] com 0
       </name>
    </attributes>
    <x0>
-   447
+   318
    </x0>
    <y0>
-   708
+   751
    </y0>
    <x1>
-   577
+   448
    </x1>
    <y1>
-   838
+   881
    </y1>
    <reset>
    false
@@ -2472,7 +2472,7 @@ compara a[regI] com 0
             ABS
             </status>
          <value>
-         A[regI] > 0
+         regI > 0
             <status>
             LOCAL
             </status>
@@ -2514,7 +2514,7 @@ compara a[regI] com 0
             </status>
          </resetval>
          <x2Obj>
-         0
+         -1
          </x2Obj>
          <y2Obj>
          -6
@@ -2531,28 +2531,28 @@ compara a[regI] com 0
    S5
    </endState>
    <startPtX>
-   697.0
+   707.0
    </startPtX>
    <startPtY>
-   746.0
+   810.0
    </startPtY>
    <endPtX>
-   577.0
+   448.0
    </endPtX>
    <endPtY>
-   773.0
+   816.0
    </endPtY>
    <startCtrlPtX>
-   666.0
+   676.0
    </startCtrlPtX>
    <startCtrlPtY>
-   751.0
+   815.0
    </startCtrlPtY>
    <endCtrlPtY>
-   614.0
+   485.0
    </endCtrlPtY>
    <endCtrlPtY>
-   775.0
+   818.0
    </endCtrlPtY>
    <startStateIndex>
    16
@@ -2595,6 +2595,18 @@ compara a[regI] com 0
    </stub>
 </transition>
 ## END STATE TRANSITION OBJECT
+<textObj>
+regAux <- a{regI]
+   <x>
+   723
+   </x>
+   <y>
+   468
+   </y>
+   <page>
+   1
+   </page>
+</textObj>
 ## START STATE OBJECT
 <state>
    <attributes>
@@ -2656,16 +2668,16 @@ compara a[regI] com 0
       </name>
    </attributes>
    <x0>
-   179
+   299
    </x0>
    <y0>
-   696
+   526
    </y0>
    <x1>
-   309
+   429
    </x1>
    <y1>
-   826
+   656
    </y1>
    <reset>
    false
@@ -2679,493 +2691,24 @@ compara a[regI] com 0
 </state>
 ## END STATE OBJECT
 <textObj>
-regAux <- a[regI]
+regJ <= regAux
    <x>
-   544
+   429
    </x>
    <y>
-   706
+   755
    </y>
    <page>
    1
    </page>
 </textObj>
-## START STATE TRANSITION OBJECT
-<transition>
-   <attributes>
-      <name>
-            <status>
-            ABS
-            </status>
-         <value>
-         trans9
-            <status>
-            LOCAL
-            </status>
-         </value>
-         <vis>
-         0
-            <status>
-            GLOBAL_VAR
-            </status>
-         </vis>
-         <type>
-         def_type
-            <status>
-            GLOBAL_VAR
-            </status>
-         </type>
-         <comment>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </comment>
-         <color>
-         -16777216
-            <status>
-            GLOBAL_VAR
-            </status>
-         </color>
-         <useratts>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </useratts>
-         <resetval>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </resetval>
-         <x2Obj>
-         0
-         </x2Obj>
-         <y2Obj>
-         0
-         </y2Obj>
-         <page>
-         1
-         </page>
-      </name>
-      <equation>
-            <status>
-            ABS
-            </status>
-         <value>
-         1
-            <status>
-            GLOBAL_VAR
-            </status>
-         </value>
-         <vis>
-         0
-            <status>
-            LOCAL
-            </status>
-         </vis>
-         <type>
-         def_type
-            <status>
-            GLOBAL_VAR
-            </status>
-         </type>
-         <comment>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </comment>
-         <color>
-         -16777216
-            <status>
-            GLOBAL_VAR
-            </status>
-         </color>
-         <useratts>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </useratts>
-         <resetval>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </resetval>
-         <x2Obj>
-         0
-         </x2Obj>
-         <y2Obj>
-         -1
-         </y2Obj>
-         <page>
-         1
-         </page>
-      </equation>
-   </attributes>
-   <startState>
-   S5
-   </startState>
-   <endState>
-   S6
-   </endState>
-   <startPtX>
-   447.0
-   </startPtX>
-   <startPtY>
-   773.0
-   </startPtY>
-   <endPtX>
-   308.0
-   </endPtX>
-   <endPtY>
-   772.0
-   </endPtY>
-   <startCtrlPtX>
-   417.0
-   </startCtrlPtX>
-   <startCtrlPtY>
-   773.0
-   </startCtrlPtY>
-   <endCtrlPtY>
-   336.0
-   </endCtrlPtY>
-   <endCtrlPtY>
-   772.0
-   </endCtrlPtY>
-   <startStateIndex>
-   18
-   </startStateIndex>
-   <endStateIndex>
-   1
-   </endStateIndex>
-   <page>
-   1
-   </page>
-   <color>
-   -16777216
-   </color>
-   <pageSX>
-   0.0
-   </pageSX>
-   <pageSY>
-   0.0
-   </pageSY>
-   <pageSCX>
-   0.0
-   </pageSCX>
-   <pageSCY>
-   0.0
-   </pageSCY>
-   <pageEX>
-   0.0
-   </pageEX>
-   <pageEY>
-   0.0
-   </pageEY>
-   <pageECX>
-   0.0
-   </pageECX>
-   <pageECY>
-   0.0
-   </pageECY>
-   <stub>
-   false
-   </stub>
-</transition>
-## END STATE TRANSITION OBJECT
-## START STATE OBJECT
-<state>
-   <attributes>
-      <name>
-            <status>
-            ABS
-            </status>
-         <value>
-         S7
-            <status>
-            LOCAL
-            </status>
-         </value>
-         <vis>
-         1
-            <status>
-            GLOBAL_VAR
-            </status>
-         </vis>
-         <type>
-         def_type
-            <status>
-            GLOBAL_VAR
-            </status>
-         </type>
-         <comment>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </comment>
-         <color>
-         -16777216
-            <status>
-            GLOBAL_VAR
-            </status>
-         </color>
-         <useratts>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </useratts>
-         <resetval>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </resetval>
-         <x2Obj>
-         0
-         </x2Obj>
-         <y2Obj>
-         0
-         </y2Obj>
-         <page>
-         1
-         </page>
-      </name>
-   </attributes>
-   <x0>
-   382
-   </x0>
-   <y0>
-   544
-   </y0>
-   <x1>
-   512
-   </x1>
-   <y1>
-   674
-   </y1>
-   <reset>
-   false
-   </reset>
-   <page>
-   1
-   </page>
-   <color>
-   -16777216
-   </color>
-</state>
-## END STATE OBJECT
 <textObj>
-b[regJ] <- regAux
+regJ <= regJ + 1
    <x>
-   306
+   400
    </x>
    <y>
-   719
-   </y>
-   <page>
-   1
-   </page>
-</textObj>
-## START STATE TRANSITION OBJECT
-<transition>
-   <attributes>
-      <name>
-            <status>
-            ABS
-            </status>
-         <value>
-         trans10
-            <status>
-            LOCAL
-            </status>
-         </value>
-         <vis>
-         0
-            <status>
-            GLOBAL_VAR
-            </status>
-         </vis>
-         <type>
-         def_type
-            <status>
-            GLOBAL_VAR
-            </status>
-         </type>
-         <comment>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </comment>
-         <color>
-         -16777216
-            <status>
-            GLOBAL_VAR
-            </status>
-         </color>
-         <useratts>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </useratts>
-         <resetval>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </resetval>
-         <x2Obj>
-         0
-         </x2Obj>
-         <y2Obj>
-         0
-         </y2Obj>
-         <page>
-         1
-         </page>
-      </name>
-      <equation>
-            <status>
-            ABS
-            </status>
-         <value>
-         1
-            <status>
-            GLOBAL_VAR
-            </status>
-         </value>
-         <vis>
-         0
-            <status>
-            LOCAL
-            </status>
-         </vis>
-         <type>
-         def_type
-            <status>
-            GLOBAL_VAR
-            </status>
-         </type>
-         <comment>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </comment>
-         <color>
-         -16777216
-            <status>
-            GLOBAL_VAR
-            </status>
-         </color>
-         <useratts>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </useratts>
-         <resetval>
-         
-            <status>
-            GLOBAL_VAR
-            </status>
-         </resetval>
-         <x2Obj>
-         0
-         </x2Obj>
-         <y2Obj>
-         0
-         </y2Obj>
-         <page>
-         1
-         </page>
-      </equation>
-   </attributes>
-   <startState>
-   S6
-   </startState>
-   <endState>
-   S7
-   </endState>
-   <startPtX>
-   293.0
-   </startPtX>
-   <startPtY>
-   719.0
-   </startPtY>
-   <endPtX>
-   390.0
-   </endPtX>
-   <endPtY>
-   641.0
-   </endPtY>
-   <startCtrlPtX>
-   306.0
-   </startCtrlPtX>
-   <startCtrlPtY>
-   693.0
-   </startCtrlPtY>
-   <endCtrlPtY>
-   355.0
-   </endCtrlPtY>
-   <endCtrlPtY>
-   644.0
-   </endCtrlPtY>
-   <startStateIndex>
-   32
-   </startStateIndex>
-   <endStateIndex>
-   15
-   </endStateIndex>
-   <page>
-   1
-   </page>
-   <color>
-   -16777216
-   </color>
-   <pageSX>
-   0.0
-   </pageSX>
-   <pageSY>
-   0.0
-   </pageSY>
-   <pageSCX>
-   0.0
-   </pageSCX>
-   <pageSCY>
-   0.0
-   </pageSCY>
-   <pageEX>
-   0.0
-   </pageEX>
-   <pageEY>
-   0.0
-   </pageEY>
-   <pageECX>
-   0.0
-   </pageECX>
-   <pageECY>
-   0.0
-   </pageECY>
-   <stub>
-   false
-   </stub>
-</transition>
-## END STATE TRANSITION OBJECT
-<textObj>
-regJ<- regJ + 1
-   <x>
-   462
-   </x>
-   <y>
-   538
+   525
    </y>
    <page>
    1
@@ -3288,16 +2831,16 @@ regJ<- regJ + 1
       </equation>
    </attributes>
    <startState>
-   S7
+   S6
    </startState>
    <endState>
    S3
    </endState>
    <startPtX>
-   512.0
+   429.0
    </startPtX>
    <startPtY>
-   609.0
+   591.0
    </startPtY>
    <endPtX>
    598.0
@@ -3306,10 +2849,10 @@ regJ<- regJ + 1
    546.0
    </endPtY>
    <startCtrlPtX>
-   535.0
+   452.0
    </startCtrlPtX>
    <startCtrlPtY>
-   601.0
+   583.0
    </startCtrlPtY>
    <endCtrlPtY>
    577.0
@@ -3359,15 +2902,202 @@ regJ<- regJ + 1
 </transition>
 ## END STATE TRANSITION OBJECT
 <textObj>
-regI<- regI + 1
+regI <= regI + 1
    <x>
-   315
+   836
    </x>
    <y>
-   734
+   760
    </y>
    <page>
    1
    </page>
 </textObj>
+## START STATE TRANSITION OBJECT
+<transition>
+   <attributes>
+      <name>
+            <status>
+            ABS
+            </status>
+         <value>
+         trans12
+            <status>
+            LOCAL
+            </status>
+         </value>
+         <vis>
+         0
+            <status>
+            GLOBAL_VAR
+            </status>
+         </vis>
+         <type>
+         def_type
+            <status>
+            GLOBAL_VAR
+            </status>
+         </type>
+         <comment>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </comment>
+         <color>
+         -16777216
+            <status>
+            GLOBAL_VAR
+            </status>
+         </color>
+         <useratts>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </useratts>
+         <resetval>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </resetval>
+         <x2Obj>
+         0
+         </x2Obj>
+         <y2Obj>
+         0
+         </y2Obj>
+         <page>
+         1
+         </page>
+      </name>
+      <equation>
+            <status>
+            ABS
+            </status>
+         <value>
+         1
+            <status>
+            GLOBAL_VAR
+            </status>
+         </value>
+         <vis>
+         0
+            <status>
+            LOCAL
+            </status>
+         </vis>
+         <type>
+         def_type
+            <status>
+            GLOBAL_VAR
+            </status>
+         </type>
+         <comment>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </comment>
+         <color>
+         -16777216
+            <status>
+            GLOBAL_VAR
+            </status>
+         </color>
+         <useratts>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </useratts>
+         <resetval>
+         
+            <status>
+            GLOBAL_VAR
+            </status>
+         </resetval>
+         <x2Obj>
+         0
+         </x2Obj>
+         <y2Obj>
+         0
+         </y2Obj>
+         <page>
+         1
+         </page>
+      </equation>
+   </attributes>
+   <startState>
+   S5
+   </startState>
+   <endState>
+   S6
+   </endState>
+   <startPtX>
+   383.0
+   </startPtX>
+   <startPtY>
+   751.0
+   </startPtY>
+   <endPtX>
+   375.0
+   </endPtX>
+   <endPtY>
+   655.0
+   </endPtY>
+   <startCtrlPtX>
+   382.0
+   </startCtrlPtX>
+   <startCtrlPtY>
+   726.0
+   </startCtrlPtY>
+   <endCtrlPtY>
+   375.0
+   </endCtrlPtY>
+   <endCtrlPtY>
+   682.0
+   </endCtrlPtY>
+   <startStateIndex>
+   27
+   </startStateIndex>
+   <endStateIndex>
+   8
+   </endStateIndex>
+   <page>
+   1
+   </page>
+   <color>
+   -16777216
+   </color>
+   <pageSX>
+   0.0
+   </pageSX>
+   <pageSY>
+   0.0
+   </pageSY>
+   <pageSCX>
+   0.0
+   </pageSCX>
+   <pageSCY>
+   0.0
+   </pageSCY>
+   <pageEX>
+   0.0
+   </pageEX>
+   <pageEY>
+   0.0
+   </pageEY>
+   <pageECX>
+   0.0
+   </pageECX>
+   <pageECY>
+   0.0
+   </pageECY>
+   <stub>
+   false
+   </stub>
+</transition>
+## END STATE TRANSITION OBJECT
 ## END OBJECTS
